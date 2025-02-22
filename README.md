@@ -28,11 +28,3 @@ The HTML versions of the report and presentation have been published using GitHu
 You can view the complete repository on GitHub:  
 [https://github.com/Kei-Nie/wdi-analysis](https://github.com/Kei-Nie/wdi-analysis)
 
-## Additional Features
-
-- **Interactive Dashboard (Bonus):** An interactive dashboard was developed using Quarto's dashboard features, incorporating dynamic filters for exploring the data.
-- **Automated Rendering (Bonus):** The project is set up with GitHub Actions to automatically render the Quarto documents upon each push, ensuring that the latest versions of the report and slides are always available.
-
----
-
-Be sure that your repository includes all the source `.qmd` files, the rendered HTML and PDF outputs, and your `bibliography.bib` file. Submit the repository link via Canvas as required.
