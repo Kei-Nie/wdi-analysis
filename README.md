@@ -22,7 +22,7 @@ The HTML versions of the report and presentation have been published using GitHu
 
 - **HTML Report:** [https://Kei-Nie.github.io/wdi-analysis/report.html](https://Kei-Nie.github.io/wdi-analysis/report.html)
 - **Presentation:** [https://Kei-Nie.github.io/wdi-analysis/slides.html](https://Kei-Nie.github.io/wdi-analysis/slides.html)
-
+- **PDF Report:** [https://github.com/Kei-Nie/wdi-analysis/blob/main/report.pdf](https://github.com/Kei-Nie/wdi-analysis/blob/main/report.pdf)
 ## Repository
 
 You can view the complete repository on GitHub:  
