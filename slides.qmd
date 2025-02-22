@@ -1,0 +1,68 @@
+---
+title: "WDI Analysis Presentation"
+author: "Kei Nie"
+date: "2025-02-22"
+format: 
+  revealjs:
+    theme: night
+    transition: zoom
+    slideNumber: true
+    center: true
+    title-slide: false   # Disable the auto-generated title slide
+---
+<style>
+.reveal {
+  font-size: 25px; /* adjust as needed */
+}
+</style>
+
+For this analysis, I used a dataset containing the World Development Indicators for 2022. The dataset was loaded using Python to access various economic and social measures for a range of countries.
+
+
+# Exploratory Data Analysis
+
+I focused my analysis on three key indicators:
+- **GDP per Capita**: Highlights the level of economic prosperity and income disparities.
+- **Life Expectancy**: Provides insight into the overall health and quality of life.
+- **Unemployment Rate**: Reflects the state of the labor market and economic stability.
+
+My findings reveal significant variations across countries, with GDP per capita showing high inequality, life expectancy remaining relatively stable, and unemployment rates varying widely.
+
+
+
+---
+
+### Bar Chart: Top 10 Countries by GDP Per Capita
+
+This chart displays the top 10 countries based on their GDP per capita, clearly illustrating the vast differences in economic output.  
+![GDP per Capita Bar Chart](bar_chart.png){fig-align="center" width="80%"}
+
+---
+
+### Scatter Plot: Life Expectancy vs. Unemployment Rate
+
+The scatter plot demonstrates the relationship between life expectancy and unemployment rate. While life expectancy tends to be stable, unemployment rates show a broad range, indicating diverse labor market conditions.  
+![Life Expectancy vs Unemployment Rate](scatter_plot.png){fig-align="center" width="80%"}
+
+
+
+# Key Statistics
+
+A summary table in the full report outlines key descriptive statistics—such as the count, mean, standard deviation, and quartile values—for GDP per capita, life expectancy, and unemployment rate. These statistics underscore the disparities and provide context for our visual findings.
+
+
+# Bibliography
+
+Several sources informed our analysis, including:
+- World Bank (2020). *World Development Indicators*. Retrieved from [https://data.worldbank.org/](https://data.worldbank.org/)
+- Provost, F., & Fawcett, T. (2013). *Data Science for Business*. O'Reilly Media.
+
+References will be automatically generated from the BibTeX file.
+
+
+
+# Conclusion
+
+The analysis of GDP per capita, life expectancy, and unemployment rate highlights significant global inequalities. The disparities in economic prosperity, health, and employment conditions emphasize the need for targeted policies and further investigation into these critical issues.
+
+Thank you for your attention!

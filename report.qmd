@@ -1,0 +1,87 @@
+---
+title: "report"
+author: "Kei Nie"
+date: "2025-02-21"
+format:
+  html: default
+  pdf: default
+bibliography: bibliography.bib
+juypter: python3
+---
+
+# 2. Load the dataset using your preferred programming language (R or Python).
+```{python}
+#| label: load-data
+#| echo: true
+import pandas as pd
+df = pd.read_csv("wdi.csv")
+print(df.head())
+```
+
+
+
+# 3. Conduct exploratory data analysis on at least three indicators of your choice. Summarise your findings in markdown sections. Show your code and results.
+```{python}
+#| label: eda-summary
+#| echo: true
+summary = df[['gdp_per_capita', 'life_expectancy', 'unemployment_rate']].describe()
+print(summary)
+```
+
+The analysis of GDP per capita, life expectancy, and unemployment rate from the dataset reveals significant economic and social disparities among countries. GDP per capita varies widely, with an average of $20,345 but a high standard deviation ($31,308), indicating strong inequality. Life expectancy is more stable, averaging 72.42 years with most countries falling between 66.78 and 78.48 years. Unemployment rates show substantial variation, with a mean of 7.27%, but extremes range from 0.13% to 37.85%, reflecting diverse labor market conditions globally. These findings highlight major global inequalities in economic prosperity, health, and employment opportunities.
+
+
+
+# 4. Create at least two different types of plots (e.g., bar chart, scatter plot) to represent your analysis. Use Quarto code chunks to embed these visualisations. Add a title and axis labels to each plot. Use Quarto to include a caption and a reference to the source of the data. Hide your code in the final document.
+
+```{python}
+#| label: bar-chart
+#| echo: false
+import matplotlib.pyplot as plt
+top10 = df.sort_values('gdp_per_capita', ascending=False).head(10)
+plt.figure(figsize=(10, 6))
+plt.bar(top10['country'], top10['gdp_per_capita'], color='skyblue')
+plt.title('Top 10 Countries by GDP Per Capita')
+plt.xlabel('Country')
+plt.ylabel('GDP Per Capita (USD)')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig("bar_chart.png")
+plt.show()
+```
+
+Figure 1: Bar chart showing the top 10 countries by GDP per capita (data from World Development Indicators). 
+
+```{python}
+#| label: scatter-plot
+#| echo: false
+plt.figure(figsize=(8, 6))
+plt.scatter(df['life_expectancy'], df['unemployment_rate'], alpha=0.7, color='coral')
+plt.title('Life Expectancy vs. Unemployment Rate')
+plt.xlabel('Life Expectancy (years)')
+plt.ylabel('Unemployment Rate (%)')
+plt.tight_layout()
+plt.savefig("scatter_plot.png")
+plt.show()
+```
+
+Figure 2: Scatter plot illustrating the relationship between life expectancy and unemployment rate. 
+
+
+
+# 6 Construct a table that highlights some key statistics from your analysis. Ensure the table is well-formatted and included in the report.
+
+```{python}
+#| label: stats-table
+#| echo: false
+import pandas as pd
+
+stats_table = summary.reset_index()
+stats_table
+```
+
+# 7. Add a bibliography using BibTeX (.bib). Cite at least two sources related to your analysis.
+
+Several sources have analyzed economic trends [@worldbank2020; @datascience].
+
+```{python}
